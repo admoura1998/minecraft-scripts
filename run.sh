@@ -2,7 +2,7 @@
 
 docker run -d -it --name $1 \
              -v $2:/data \
-	        -e EULA=true -e TYPE=BUKKIT -e VERSION=$3 -e MEMORY= $4 \
+	        -e EULA=true -e TYPE=BUKKIT -e VERSION=$3 -e MEMORY=$4 \
 	        -p 25565:25565 \
             $5
 

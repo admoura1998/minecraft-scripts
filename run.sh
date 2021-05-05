@@ -6,7 +6,11 @@ docker run -d --name $1 \
 	        -p 25565:25565 \
             $5
 
-printf "$1">variables.txt
+if [ $? -eq 1 ];
+then
+    exit 1
+fi    
+
 
 
 

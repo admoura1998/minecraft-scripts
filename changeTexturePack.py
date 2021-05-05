@@ -2,7 +2,7 @@ import re
 import os
 
 url = os.getenv('URL')
-properties = os.getenv('SERVERDIRECTORY-CONTAINER')+"/server.properties"
+properties = os.getenv('SERVER_DIRECTORY_CONTAINER')+"/server.properties"
 
 print(url)
 print(properties)

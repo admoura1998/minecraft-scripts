@@ -1,8 +1,8 @@
 import re
 import os
 
-url="https://github.com/admoura1998/minecraft-texturepacks/blob/master/Clarity-1.16.zip?raw=true"
-properties="/home/alvaro/Minecraft-Server/server.properties"
+url = os.getenv(URL)
+properties = os.getenv(SERVERDIRECTORY)+"/server.properties"
 rsc="resource-pack="
 
 def clearParameter(data):

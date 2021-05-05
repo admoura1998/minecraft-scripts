@@ -1,8 +1,12 @@
 import re
 import os
 
-url = os.getenv(URL)
-properties = os.getenv(SERVERDIRECTORY)+"/server.properties"
+url = os.getenv('URL')
+properties = os.getenv('SERVERDIRECTORY')+"/server.properties"
+
+print(url)
+print(properties)
+
 rsc="resource-pack="
 
 def clearParameter(data):

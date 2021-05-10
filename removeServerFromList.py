@@ -3,7 +3,7 @@ import re
 import fileinput
 import sys
 
-arch = os.getenv('SERVER_LIST_PATH')+"/"+os.getenv('SERVER_LIST_FILE')
+arch = os.getenv('SERVER_LIST_PATH')+"/server-list.properties"
 server = os.getenv('SERVIDOR')
 
 def removeServer(server):

@@ -5,7 +5,7 @@ import sys
 
 arch = os.getenv('SERVER_LIST_PATH')+"/"+os.getenv('SERVER_LIST_FILE')
 server = os.getenv('NOME_CONTAINER')
-line="servers="
+line = f"servers={server},"
 
 def updateServerFile(server):    
     with open(arch, 'r+') as file: 

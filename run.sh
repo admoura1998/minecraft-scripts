@@ -2,11 +2,11 @@
 
 docker run -d --name $1 \
             -v $2:/data \
-	        -e EULA=true -e TYPE=BUKKIT -e VERSION=$3 \
-            -e MEMORY=$4 -e ONLINE_MODE=FALSE -e ENABLE_RCON=TRUE \
+	        -e EULA=true -e TYPE=BUKKIT -e VERSION=$4 \
+            -e MEMORY=$5 -e ONLINE_MODE=FALSE -e ENABLE_RCON=TRUE \
              -e RCON_PASSWORD=teste -e RCON_PORT=28016 \
-            -p $5:$5 \
-            $6
+            -p $6:$6 \
+            $7
   
 
 

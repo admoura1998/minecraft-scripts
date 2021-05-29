@@ -2,11 +2,11 @@
 
 docker run -d --name $1 \
             -v $2:/data \
-	        -e EULA=true -e TYPE=$3 -e VERSION=$4 \
-            -e MEMORY=$5 -e ONLINE_MODE=FALSE -e ENABLE_RCON=TRUE \
+	        -e EULA=true -e TYPE=$3 -e VERSION=$4 -e DIFFICULTY=$5 \
+            -e MEMORY=$6 -e ONLINE_MODE=FALSE -e ENABLE_RCON=TRUE \
              -e RCON_PASSWORD=teste -e RCON_PORT=28016 \
-            -p $6:25565 \
-            $7
+            -p $7:25565 \
+            $8
   
 
 

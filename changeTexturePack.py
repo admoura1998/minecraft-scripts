@@ -1,7 +1,7 @@
 import re
 import os
 
-url = os.getenv('URL')
+url =  '"' + os.getenv('URL') + '"'
 properties = os.getenv('SERVER_DIRECTORY_HOST')+"/server.properties"
 
 print(url)

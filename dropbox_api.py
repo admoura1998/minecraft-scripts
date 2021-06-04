@@ -11,6 +11,7 @@ file = os.getenv("FILE")
 destination = os.getenv("DESTINATION")
 host_path = os.getenv("HOST_PATH")
 path = os.getenv("PATH")
+opt = int(opt)
 
 def upload_file(dbx, file, destination):
     with open(file, "rb+") as f:        

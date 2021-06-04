@@ -12,11 +12,10 @@ path = os.getenv("PATH")
 def upload_file(dbx, file, destination):
     with open(file, "rb+") as f:
         try:
-            dbx.files_upload(f.read(), f"/{destination}.{file.split('.')[1]}", mode=dropbox.files.WriteMode.overwrite)            
+            dbx.files_upload(f.read(), f"/{destination}.{file.split('.')[1]}", mode=dropbox.files.WriteMode.overwrite) 
+            # dbx.files_upload(f.read(), f"/plugins-config.{file.split('.')[1]}", mode=dropbox.files.WriteMode.overwrite)          
         except dropbox.exceptions.ApiError as err:
             print(err)
-              
-
 
 def download_file(dbx,host_path,path):
     try: 

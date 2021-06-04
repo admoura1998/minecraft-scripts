@@ -3,6 +3,9 @@ import os
 from secrets import TOKEN
 
 dbx = dropbox.Dropbox(oauth2_access_token=TOKEN, app_key="n56k7vj4k8uwer3")
+
+print(f"DBX -> {dbx}")
+
 opt = os.getenv("OPERATION")
 file = os.getenv("FILE")
 destination = os.getenv("DESTINATION")

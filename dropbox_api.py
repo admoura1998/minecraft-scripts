@@ -15,22 +15,22 @@ def upload_file(dbx, file, destination):
             dbx.files_upload(f.read(), f"/{destination}.{file.split('.')[1]}", mode=dropbox.files.WriteMode.overwrite)            
         except dropbox.exceptions.ApiError as err:
             print(err)
-            exit(0)  
+              
 
 
 def download_file(dbx,host_path,path):
     try: 
         file = dbx.files_download_to_file(host_path+'/'+path.split('/')[1],path)       
     except dropbox.exceptions.ApiError as err:
-        print(err)
-        exit(0)
+        print(err)       
 
 print(f"OPERTATION -> {opt}")
 print(f"FILE -> {file} ")
 print(f"DESTINATION -> {destination} ")
 
 if(opt == 0):
-    upload_file(dbx, file, destination)    
+    upload_file(dbx, file, destination)
+    exit(0)    
 download_file(dbx, host_path, path)                        
     
 

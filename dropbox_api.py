@@ -5,8 +5,6 @@ from secrets import TOKEN
 dbx = dropbox.Dropbox(oauth2_access_token=TOKEN)
 opt = os.getenv("OPERATION")
 
-print(f"TOKEN ->>>>>>>>>>>> {TOKEN}")
-
 def upload_file(dbx, file, destination):
     with open(file, "rb+") as f:
         try:

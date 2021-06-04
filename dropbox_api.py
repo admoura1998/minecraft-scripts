@@ -31,7 +31,7 @@ print(f"DESTINATION -> {destination} ")
 if(opt == 0):
     upload_file(dbx, file, destination)
     exit(0)    
-download_file(dbx, host_path, path)                        
+#download_file(dbx, host_path, path)                        
     
 
 

@@ -21,6 +21,10 @@ def download_file(dbx,host_path,path):
         print(err)
         exit(0)
 
+print(f"OPERTATION -> {opt}")
+print(f"FILE -> {os.getenv(FILE)} ")
+print(f"DESTINATION -> {os.getenv(DESTINATION)} ")
+
 
 if(opt == 0):
     upload_file(dbx, os.getenv("FILE"), os.getenv("DESTINATION"))    

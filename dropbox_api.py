@@ -26,9 +26,9 @@ print(f"OPERTATION -> {opt}")
 print(f"FILE -> {file} ")
 print(f"DESTINATION -> {destination} ")
 
-if(opt == 0):
-    upload_file(dbx, file, destination)
-    exit(0)    
+
+upload_file(dbx, file, destination)
+      
 #download_file(dbx, host_path, path)                        
     
 

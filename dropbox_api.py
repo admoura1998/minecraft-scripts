@@ -4,6 +4,10 @@ from secrets import TOKEN
 
 dbx = dropbox.Dropbox(oauth2_access_token=TOKEN)
 opt = os.getenv("OPERATION")
+file = os.getenv("FILE")
+destination = os.getenv("DESTINATION")
+host_path = os.getenv("HOST_PATH")
+path = os.getenv("PATH")
 
 def upload_file(dbx, file, destination):
     with open(file, "rb+") as f:
@@ -22,13 +26,12 @@ def download_file(dbx,host_path,path):
         exit(0)
 
 print(f"OPERTATION -> {opt}")
-print(f"FILE -> {os.getenv(FILE)} ")
-print(f"DESTINATION -> {os.getenv(DESTINATION)} ")
-
+print(f"FILE -> {file} ")
+print(f"DESTINATION -> {destination} ")
 
 if(opt == 0):
-    upload_file(dbx, os.getenv("FILE"), os.getenv("DESTINATION"))    
-download_file(dbx, os.getenv("HOST_PATH"), os.getenv("PATH"))                        
+    upload_file(dbx, file, destination)    
+download_file(dbx, host_path, path)                        
     
 
 
